@@ -1,0 +1,32 @@
+{
+  "name": "micro-tools",
+  "version": "1.0.0",
+  "description": "Open-source calculation logic for German regulatory compliance tools",
+  "author": "Florian Kiptschuk",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/FlorianKip/micro-tools"
+  },
+  "keywords": [
+    "germany",
+    "legal",
+    "calculator",
+    "geg",
+    "heizung",
+    "verpackg",
+    "compliance"
+  ],
+  "type": "module",
+  "exports": {
+    "./geg-heizungstausch": "./geg-heizungstausch/index.ts"
+  },
+  "scripts": {
+    "test": "tsx --test **/*.test.ts",
+    "test:geg": "tsx --test geg-heizungstausch/calculator.test.ts"
+  },
+  "devDependencies": {
+    "tsx": "^4.7.0",
+    "typescript": "^5.4.0"
+  }
+}
