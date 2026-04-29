@@ -14,11 +14,13 @@ These calculators implement German law. The logic should be:
 
 ## Available Calculators
 
-| Calculator | Law | Status |
-|------------|-----|--------|
-| [geg-heizungstausch](./geg-heizungstausch/) | §72 GEG | ✅ Production |
-| [verpackg-ruecknahme](./verpackg-ruecknahme/) | §31 VerpackG | 🚧 Coming soon |
-| [aml-bargeldobergrenze](./aml-bargeldobergrenze/) | §2 GwG | 🚧 Coming soon |
+| Calculator | Law | Live Tool | Status |
+|------------|-----|-----------|--------|
+| *Coming soon* | — | — | — |
+
+Calculators are added here when their associated tools go live with their own domain.
+
+**Rule:** Only tools with live domains get published here. No placeholders, no pre-launch code.
 
 ## Usage
 
