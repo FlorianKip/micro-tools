@@ -1,57 +1,47 @@
-# Contributing to micro-tools
+# Beiträge zu micro-tools
 
-Found a bug in the calculation logic? You might earn a bounty.
+Fehler in der Berechnungslogik gefunden? Bitte ein Issue öffnen.
 
-## Bug Bounty Program
+## Was zählt als meldenswerter Fehler
 
-We offer **50€** for verified bugs in the calculation logic that would lead to incorrect results for users.
+- Logikfehler, die zu falschen Ergebnissen führen
+- Nicht behandelte Grenzfälle
+- Veraltete Rechtsgrundlagen (Gesetz geändert, Code nicht)
+- Fehlende Validierung, die ungültige Eingaben durchlässt
 
-### What qualifies:
+## Was nicht zählt
 
-- Logic errors that produce wrong results
-- Edge cases not handled correctly
-- Outdated legal references (law changed but code did not)
-- Missing validation that allows invalid inputs
+- Tippfehler in der Dokumentation
+- Code-Stil-Vorschläge
+- Feature-Anfragen
+- Fehler in Testdateien (außer sie verdecken echte Bugs)
 
-### What does NOT qualify:
+## Wie ein Issue erstellt wird
 
-- Typos in documentation
-- Code style suggestions
-- Feature requests
-- Bugs in test files (unless they mask real bugs)
+1. Issue öffnen mit:
+   - Verwendeten Eingabewerten
+   - Erhaltenem Ergebnis
+   - Erwartetem Ergebnis
+   - Rechtsgrundlage für das erwartete Ergebnis
 
-### How to claim:
+2. Wir prüfen das Issue (in der Regel innerhalb von 48 Stunden)
 
-1. Open an issue with:
-   - Input values you used
-   - Result you got
-   - Result you expected
-   - Legal reference proving the expected result
+## Reguläre Beiträge
 
-2. Wait for verification (usually within 48h)
+Für Dokumentation, neue Rechner oder Verbesserungen:
 
-3. If confirmed, you will be credited in the fix commit and receive 50€ via PayPal
+1. Repo forken
+2. Branch anlegen (`feature/mein-feature` oder `fix/mein-fix`)
+3. Tests für Logikänderungen hinzufügen
+4. PR mit klarer Beschreibung öffnen
 
-### Examples of past bounties:
+## Code-Standards
 
-*None yet — be the first!*
+- TypeScript Strict Mode
+- Keine Laufzeit-Abhängigkeiten
+- Jede Berechnung braucht eine `RECHTSGRUNDLAGEN.md` mit offiziellen Quellen
+- Mindestens 5 Testfälle pro Rechner
 
-## Regular Contributions
+## Fragen?
 
-For non-bounty contributions (docs, new calculators, improvements):
-
-1. Fork the repo
-2. Create a branch (`feat/your-feature` or `fix/your-fix`)
-3. Add tests for any logic changes
-4. Open a PR with a clear description
-
-## Code Standards
-
-- TypeScript strict mode
-- Zero runtime dependencies
-- Every calculation must have a `LEGAL_REFS.md` with official sources
-- Minimum 5 test cases per calculator
-
-## Questions?
-
-Open a Discussion on GitHub or reach out via the live tools.
+Discussion auf GitHub öffnen oder über die Live-Tools melden.

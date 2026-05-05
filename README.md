@@ -1,77 +1,77 @@
 # micro-tools
 
-Open-source calculation logic for German regulatory compliance tools.
+Open-Source-Berechnungslogik für deutsche Rechts- und Compliance-Tools.
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![Lizenz: MIT](https://img.shields.io/badge/Lizenz-MIT-green.svg)](LICENSE)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue.svg)](https://www.typescriptlang.org/)
 
-## Why Open Source?
+## Warum Open Source?
 
-These calculators implement German law. The logic should be:
-- **Transparent** — you can verify the calculation yourself
-- **Auditable** — legal references are linked in the code
-- **Trustworthy** — no black-box magic, no AI hallucinations
+Diese Rechner setzen deutsches Recht um. Die Logik sollte:
+- **Nachvollziehbar** sein — jeder kann die Berechnung selbst prüfen
+- **Prüfbar** sein — Rechtsgrundlagen sind im Code verlinkt
+- **Vertrauenswürdig** sein — keine Blackbox, keine KI-Halluzinationen
 
-## Available Calculators
+## Verfügbare Rechner
 
-| Calculator | Law | Live Tool | Status |
-|------------|-----|-----------|--------|
-| *Coming soon* | — | — | — |
+| Rechner | Gesetz | Live-Tool | Status |
+|---------|--------|-----------|--------|
+| *Demnächst verfügbar* | — | — | — |
 
-Calculators are added here when their associated tools go live with their own domain.
+Rechner werden hier veröffentlicht, sobald das zugehörige Tool mit eigener Domain live ist.
 
-**Rule:** Only tools with live domains get published here. No placeholders, no pre-launch code.
+**Regel:** Nur Tools mit eigener Domain werden hier veröffentlicht. Kein Platzhalter-Code, kein Pre-Launch-Code.
 
-## Usage
+## Verwendung
 
-Each calculator is a standalone TypeScript module with zero dependencies.
+Jeder Rechner ist ein eigenständiges TypeScript-Modul ohne externe Abhängigkeiten.
 
 ```typescript
-import { calculate } from './geg-heizungstausch/calculator';
+import { berechne } from './geg-heizungstausch/rechner';
 
-const result = calculate({
-  installationYear: 1994,
-  boilerType: 'constant-temperature',
-  largeCity: true,
-  ownerOccupiedSince2002: false
+const ergebnis = berechne({
+  einbaujahr: 1994,
+  kesseltyp: 'konstanttemperatur',
+  grossstadt: true,
+  selbstbewohntSeit2002: false
 });
 
-// result.status: 'affected' | 'not-affected' | 'exempt'
-// result.deadline: '2026-06-30' | '2028-06-30' | null
-// result.reason: string (German)
-// result.legalRef: string (URL to law)
+// ergebnis.status: 'betroffen' | 'nicht-betroffen' | 'ausgenommen'
+// ergebnis.frist: '2026-06-30' | '2028-06-30' | null
+// ergebnis.begruendung: string
+// ergebnis.rechtsgrundlage: string (URL zur Gesetzesquelle)
 ```
 
-## Structure
+## Struktur
 
-Each calculator follows the same pattern:
+Jeder Rechner folgt demselben Aufbau:
 
 ```
-calculator-name/
-├── calculator.ts      # Pure logic, no dependencies
-├── calculator.test.ts # Edge case tests
-├── types.ts           # Input/output types
-├── README.md          # Legal context + examples
-└── LEGAL_REFS.md      # Links to official sources
+rechner-name/
+├── rechner.ts         # Reine Logik, keine Abhängigkeiten
+├── rechner.test.ts    # Tests für Grenzfälle
+├── typen.ts           # Ein- und Ausgabe-Typen
+├── README.md          # Rechtlicher Kontext + Beispiele
+└── RECHTSGRUNDLAGEN.md # Links zu offiziellen Quellen
 ```
 
-## Legal Disclaimer
+## Rechtlicher Hinweis
 
-This code implements our interpretation of German law for educational purposes. It is not legal advice. Always consult a professional for binding legal questions.
+Dieser Code setzt unsere Interpretation des deutschen Rechts zu Informationszwecken um. Er stellt keine Rechtsberatung dar. Bei verbindlichen Rechtsfragen immer einen Fachmann hinzuziehen.
 
-The calculations are verified against official sources (linked in each calculator), but laws change. Check the `lastVerified` date in each module.
+Die Berechnungen sind gegen offizielle Quellen verifiziert (in jedem Modul verlinkt), aber Gesetze ändern sich. Das `letzteVerifizierung`-Datum im jeweiligen Modul beachten.
 
-## Contributing
+## Beitragen
 
-Found a bug in the logic? Please open an issue with:
-1. Your input values
-2. Expected result (with legal reference)
-3. Actual result
+Fehler in der Logik gefunden? Bitte ein Issue öffnen mit:
+1. Den verwendeten Eingabewerten
+2. Dem erwarteten Ergebnis (mit Rechtsgrundlage)
+3. Dem tatsächlichen Ergebnis
 
-## License
+## Lizenz
 
-MIT — use it, fork it, embed it. Attribution appreciated but not required.
+MIT — verwenden, forken, einbetten. Namensnennung erwünscht, aber nicht verpflichtend.
 
 ---
 
-Made with ❤️ and open source by [Florian Kiptschuk](https://github.com/FlorianKip)
+Von [Florian Kiptschuk](https://github.com/FlorianKip)
